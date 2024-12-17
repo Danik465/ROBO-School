@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Стили применяемые глабально, ко всему */
+body{
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+.main__container{
+    background-color: var(--bg-color);
+}
+.header__container{
+    max-width: 1720px;
+    margin: 0 auto;
+}
+.container{
+    max-width: 1169px;
+    margin: 0 auto;
+}
+/* Задание перременных */
+
+:root{
+    --bg-color: #141024;
+    --bg-color-btn: #d52027;
+}
+
+
+
+/* Стилизация header'a */
+
+
+.header{
+
+    padding-bottom: 85px;
+}
+
+.header__panel-logo-img{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 160%;
+    color: white;
+}
+.header__panel--link{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    text-align: center;
+    color: #fff;
+}
+.header__panel-number{
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 160%;
+    text-align: right;
+    color: #fff;
+}
+
+.header__panel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header__panel-items{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+
+
+/* Стилизация banner */
+
+
+.banner__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:28px;
+    position: relative;
+
+}
+.banner__items::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url(/image/woman.logo.png);
+    background-size:783px;
+    background-repeat: no-repeat;
+    width: 783px;
+    height: 917px;
+    top: -183px;
+    right: -816px;
+    z-index: 1;
+}
+.banner__items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 516px;
+    position: relative;
+    margin-top: 151px;
+    margin-bottom: 420px;
+}
+
+
+.banner__title{
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 160%;
+    color: #fff;
+}
+.banner__text{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    color: #fff;
+    padding-top: 20px;
+    max-width: 478px;
+}
+.banner_btn{
+    border-radius: 5px;
+    width: 260px;
+    height: 79px;
+    background-color: var(--bg-color-btn);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    color: #fff;
+    margin-top: 50px;
+}
+
+
+.banner__logo-woman{
+    max-width: 783px;
+    max-height: 917px;
+}
