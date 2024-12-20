@@ -2,34 +2,52 @@
 
 
 /* Стили применяемые глабально, ко всему */
-body{
+body {
     font-family: "Jost", sans-serif;
     font-weight: 400;
     margin: 0;
+    color: var(--bg-color);
     padding: 0;
 }
 
-li{
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+li {
     list-style-type: none;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
-.main__container{
+.main__container {
     background-color: var(--bg-color);
+    padding: 0 20px;
 }
-.header__container{
-    max-width: 1720px;
+
+.header__container .advent__container {
+    max-width: 1680px;
     margin: 0 auto;
+    padding: 0 20px;
 }
-.container{
+
+.advent__container {
+    background-color: #F9F9F9;
+}
+
+.container {
     max-width: 1169px;
     margin: 0 auto;
 }
+
 /* Задание перременных */
 
-:root{
+:root {
     --bg-color: #141024;
     --bg-color-btn: #d52027;
 }
@@ -39,25 +57,27 @@ a{
 /* Стилизация header'a */
 
 
-.header{
+.header {
 
     padding-bottom: 85px;
 }
 
-.header__panel-logo-img{
+.header__panel-logo-img {
     font-weight: 700;
     font-size: 30px;
     line-height: 160%;
     color: white;
 }
-.header__panel--link{
+
+.header__panel--link {
     font-weight: 400;
     font-size: 20px;
     line-height: 160%;
     text-align: center;
     color: #fff;
 }
-.header__panel-number{
+
+.header__panel-number {
     font-weight: 600;
     font-size: 30px;
     line-height: 160%;
@@ -65,14 +85,14 @@ a{
     color: #fff;
 }
 
-.header__panel{
+.header__panel {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 
-.header__panel-items{
+.header__panel-items {
     display: flex;
     justify-content: space-between;
     gap: 40px;
@@ -83,28 +103,31 @@ a{
 /* Стилизация banner */
 
 
-.banner__wrapper{
+.banner__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap:28px;
+    gap: 28px;
     position: relative;
 
 }
-.banner__items::after{
+
+.banner__items::after {
     content: '';
     display: block;
     position: absolute;
     background-image: url(/image/woman.logo.png);
-    background-size:783px;
+    background-size: 783px;
     background-repeat: no-repeat;
     width: 783px;
     height: 917px;
+    object-fit: contain;
     top: -183px;
     right: -816px;
     z-index: 1;
 }
-.banner__items{
+
+.banner__items {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -115,13 +138,14 @@ a{
 }
 
 
-.banner__title{
+.banner__title {
     font-weight: 600;
     font-size: 70px;
     line-height: 160%;
     color: #fff;
 }
-.banner__text{
+
+.banner__text {
     font-weight: 400;
     font-size: 20px;
     line-height: 160%;
@@ -129,7 +153,11 @@ a{
     padding-top: 20px;
     max-width: 478px;
 }
-.banner_btn{
+
+.banner_btn,
+.price__list-btn {
+    cursor: pointer;
+    border: 3px solid #d52027;
     border-radius: 5px;
     width: 260px;
     height: 79px;
@@ -138,14 +166,234 @@ a{
     font-size: 18px;
     line-height: 160%;
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
     color: #fff;
     margin-top: 50px;
+    transition: all 0.2s ease-in;
+}
+.banner_btn:hover{
+    background-color: #fff;
+    color: #d52027;
+
 }
 
 
-.banner__logo-woman{
+.banner__logo-woman {
     max-width: 783px;
     max-height: 917px;
+}
+
+
+/* Стили информационная панедль - info */
+
+
+.info__wrapper {
+    margin: 120px 0;
+
+}
+
+
+.info__title {
+    font-size: 30px;
+    line-height: 160%;
+    max-width: 900px;
+    margin-bottom: 60px;
+}
+
+.info__title span {
+    font-weight: 600;
+}
+
+/* Параметры панели инфо */
+
+.info__items {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.info__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+.info__items-parametr h2 {
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 160%;
+
+    color: var(--bg-color-btn);
+}
+
+.info__items-text p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+}
+
+
+
+
+/* Рекламная вствка - advent */
+
+
+.advert {
+    padding: 100px 0;
+
+}
+
+.advert__title {
+    margin: 0;
+    padding-bottom: 60px;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 160%;
+}
+
+.advent__items {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+}
+
+.advent__items-element {
+    max-width: 370px;
+}
+
+.advent__items-header {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 160%;
+    margin-bottom: 20px;
+}
+
+.advent__items-text {
+    font-size: 18px;
+    line-height: 160%;
+}
+
+
+
+/* Слайдер с фотографиями - slider */
+
+
+.slider__wrapper {
+    margin-top: 120px;
+    margin-bottom: 77px;
+}
+
+.slider__title {
+    margin-bottom: 60px;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 160%;
+}
+
+.slider__cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+}
+
+.slider__item-image img {
+    max-width: 360px;
+    height: 500px;
+}
+
+.slider__item-name {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 160%
+}
+
+.slider__item-post,
+.slider__item-detaile {
+    font-size: 18px;
+    line-height: 160%;
+}
+
+.slider__item-detaile a {
+    color: #d52027;
+}
+
+
+/* Блок с ценами price-list */
+
+
+.price-list {
+    margin-top: 120px;
+    margin-bottom: 140px;
+}
+
+.price-list__title {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 160%;
+}
+
+.price-list__items {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.price-list__elem {
+    border: 1px solid rgba(20, 16, 36, 0.2);
+    border-radius: 20px;
+    width: 360px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.price-list__elem:hover {
+    background-color: var(--bg-color);
+    color: #fff;
+    transform: scaleY(1.1);
+}
+
+.price-list__title {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 160%;
+    text-align: center;
+}
+
+.price-list__value {
+    padding-bottom: 20px;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 160%;
+    text-align: center;
+
+}
+
+.price-list__text span {
+    opacity: 0;
+}
+
+
+.price-list__text {
+    padding-bottom: 30px;
+    font-size: 18px;
+    line-height: 160%;
+    text-align: center;
+}
+
+.price__list-btn {
+    margin: 0;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 160%;
+    text-align: center;
 }
