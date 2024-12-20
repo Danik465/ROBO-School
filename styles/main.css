@@ -30,10 +30,21 @@ a {
     padding: 0 20px;
 }
 
-.header__container .advent__container {
+.header__container,
+.advent__container,
+.discount__container {
     max-width: 1680px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.discount__container {
+
+    background-repeat: no-repeat;
+    height: 460px;
+    background-color: #d52027;
+    background-image: url('/image/perc.png');
+    background-position: bottom;
 }
 
 .advent__container {
@@ -172,7 +183,8 @@ a {
     margin-top: 50px;
     transition: all 0.2s ease-in;
 }
-.banner_btn:hover{
+
+.banner_btn:hover {
     background-color: #fff;
     color: #d52027;
 
@@ -396,4 +408,82 @@ a {
     font-size: 18px;
     line-height: 160%;
     text-align: center;
+}
+
+
+.discount {
+    display: flex;
+    justify-content: space-around;
+
+    padding-top: 87px;
+}
+
+
+.discount__form {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    gap: 10px;
+    width: 500px;
+    height: 290px;
+
+}
+
+.discount__panel {
+    padding-top: 19px;
+}
+
+.discount__title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 130%;
+    color: #fff;
+    width: 460px;
+    padding-bottom: 20px;
+}
+
+.discount__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    color: #fff;
+}
+
+.discount__form input {
+    height: 64px;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(40, 41, 68, 0.7);
+
+}
+
+.discount__form-input {
+    padding-left: 20px;
+    padding-right: 181px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.discount__form-btn {
+    border-radius: 5px;
+    width: 500px;
+    height: 64px;
+    background-color: var(--bg-color);
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.discount__form-btn:hover {
+    background-color: #fff;
+    color: #d52027;
+}
+
+.discount__form-input-tel:hover::placeholder {
+    font-size: 30px;
 }
